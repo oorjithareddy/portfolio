@@ -224,3 +224,42 @@ footer {
     display: none;
   }
 }
+.top-nav {
+  display: flex;
+  gap: 2rem;
+  padding: 1.5rem;
+}
+
+.top-nav a {
+  text-decoration: none;
+  color: var(--text-dark);
+  font-weight: 500;
+}
+
+.top-nav a.active {
+  color: var(--lilac);
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.project-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 16px;
+  text-decoration: none;
+  color: var(--text-dark);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+}
+
+.project-page {
+  max-width: 800px;
+}
