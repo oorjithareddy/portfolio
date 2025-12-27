@@ -1,4 +1,14 @@
-/* ---------- RESET ---------- */
+:root {
+  --cream: #fdfbd4;
+  --lilac: #a47dab;
+  --sage: #84ab7d;
+  --blue: #40b7ff;
+
+  --text-dark: #1f2933;
+  --text-muted: #6b7280;
+}
+
+/* RESET */
 * {
   margin: 0;
   padding: 0;
@@ -9,23 +19,22 @@ html {
   scroll-behavior: smooth;
 }
 
-/* ---------- BASE ---------- */
+/* BASE */
 body {
-  font-family: 'Inter', sans-serif;
-  background-color: #fafafa;
-  color: #1f2933;
+  font-family: 'Libre Baskerville', serif;
+  background-color: var(--cream);
+  color: var(--text-dark);
   line-height: 1.7;
   overflow-x: hidden;
 }
 
-/* ---------- TYPOGRAPHY ---------- */
+/* TYPOGRAPHY */
 h1, h2, h3 {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Archivo Black', sans-serif;
 }
 
 h1 {
-  font-size: 3rem;
-  font-weight: 700;
+  font-size: 2.8rem;
 }
 
 h2 {
@@ -34,47 +43,55 @@ h2 {
 }
 
 h3 {
-  font-size: 1.25rem;
-  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  margin-bottom: 0.6rem;
 }
 
-/* ---------- FLOATING NOTE ---------- */
-.floating-note {
+/* SYSTEM SIDEBAR */
+.system-sidebar {
   position: fixed;
-  bottom: 20px;
-  left: 20px;
-  background: white;
-  padding: 0.8rem 1rem;
-  border-radius: 12px;
-  font-size: 0.9rem;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-  z-index: 10;
+  top: 120px;
+  right: 24px;
+  width: 190px;
+  background: rgba(255, 255, 255, 0.6);
+  border-left: 4px solid var(--sage);
+  padding: 1rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  border-radius: 10px;
 }
 
-/* ---------- SECTIONS ---------- */
+.system-title {
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+  color: var(--lilac);
+  margin-bottom: 0.6rem;
+}
+
+/* SECTIONS */
 section {
   max-width: 1100px;
   margin: 0 auto;
   padding: 5rem 1.5rem;
 }
 
-/* ---------- HERO ---------- */
+/* HERO */
 #hero {
   min-height: 90vh;
   display: grid;
   grid-template-columns: 1.2fr 0.8fr;
-  align-items: center;
   gap: 3rem;
+  align-items: center;
 }
 
 .highlight {
-  color: #2563eb;
+  color: var(--lilac);
 }
 
 .subtitle {
   font-size: 1.1rem;
+  color: var(--text-muted);
   margin: 1.5rem 0 2.5rem;
-  color: #4b5563;
 }
 
 .hero-buttons {
@@ -85,67 +102,46 @@ section {
 .hero-note {
   margin-top: 2rem;
   font-size: 0.95rem;
-  color: #6b7280;
+  color: var(--text-muted);
 }
 
-/* ---------- HERO VISUAL ---------- */
-.hero-visual {
-  position: relative;
-  height: 320px;
-}
-
-.blob {
-  width: 280px;
-  height: 280px;
-  background: linear-gradient(135deg, #2563eb, #60a5fa);
-  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-  animation: float 6s ease-in-out infinite;
-}
-
-@keyframes float {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-12px); }
-  100% { transform: translateY(0); }
-}
-
-/* ---------- BUTTONS ---------- */
+/* BUTTONS */
 .btn {
   padding: 0.75rem 1.5rem;
   border-radius: 10px;
   text-decoration: none;
-  font-weight: 500;
-  transition: transform 0.25s ease, background-color 0.25s ease;
+  font-family: 'Inter', sans-serif;
 }
 
 .btn.primary {
-  background-color: #2563eb;
+  background-color: var(--blue);
   color: white;
 }
 
-.btn.primary:hover {
-  transform: translateY(-2px);
-  background-color: #1d4ed8;
-}
-
 .btn.secondary {
-  border: 1px solid #d1d5db;
-  color: #1f2933;
+  border: 1px solid var(--text-muted);
+  color: var(--text-dark);
 }
 
-.btn.secondary:hover {
-  background-color: #f3f4f6;
-  transform: translateY(-2px);
+/* HERO VISUAL */
+.hero-visual {
+  position: relative;
 }
 
-/* ---------- DIVIDER ---------- */
+.doodle {
+  width: 220px;
+  opacity: 0.35;
+}
+
+/* DIVIDER */
 .section-divider {
   text-align: center;
   margin: 3rem 0;
-  color: #9ca3af;
   letter-spacing: 6px;
+  color: var(--text-muted);
 }
 
-/* ---------- CAPABILITIES ---------- */
+/* CAPABILITIES */
 .cap-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
@@ -154,110 +150,77 @@ section {
 
 .cap-card {
   background: white;
-  padding: 1.7rem;
+  padding: 1.8rem;
   border-radius: 16px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.05);
 }
 
-.cap-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 20px 45px rgba(0,0,0,0.08);
-}
-
+/* ASIDE */
 .aside {
   margin-top: 2.5rem;
   font-style: italic;
-  color: #6b7280;
-  max-width: 600px;
+  color: var(--text-muted);
+  max-width: 650px;
 }
 
-/* ---------- PROJECTS ---------- */
+/* PROJECTS */
 .project {
   background: white;
   padding: 2rem;
   border-radius: 18px;
   margin-bottom: 2rem;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.project:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 22px 50px rgba(0,0,0,0.08);
-}
-
-.project-header {
-  display: flex;
-  flex-direction: column;
-  gap: 0.3rem;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.05);
 }
 
 .project-tag {
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   letter-spacing: 1px;
-  color: #2563eb;
-  text-transform: uppercase;
+  color: var(--sage);
 }
 
 .tech {
   font-size: 0.9rem;
-  color: #6b7280;
+  color: var(--text-muted);
   margin: 0.7rem 0 1.2rem;
 }
 
 .project-link {
+  color: var(--blue);
   text-decoration: none;
-  color: #2563eb;
-  font-weight: 500;
 }
 
-.project-link:hover {
-  text-decoration: underline;
-}
-
-/* ---------- WRITING ---------- */
+/* NOTES */
 .writing-item {
   background: white;
   padding: 2rem;
   border-radius: 18px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
 }
 
-/* ---------- FOOTER ---------- */
+/* FOOTER */
 footer {
   text-align: center;
   padding: 4rem 1.5rem;
-  border-top: 1px solid #e5e7eb;
-}
-
-.footer-links {
-  margin: 1.2rem 0;
+  border-top: 1px solid rgba(0,0,0,0.1);
 }
 
 .footer-links a {
   margin: 0 1rem;
+  color: var(--blue);
   text-decoration: none;
-  color: #2563eb;
-  font-weight: 500;
 }
 
 .footer-note {
   font-size: 0.9rem;
-  color: #6b7280;
+  color: var(--text-muted);
 }
 
-/* ---------- RESPONSIVE ---------- */
+/* RESPONSIVE */
 @media (max-width: 900px) {
   #hero {
     grid-template-columns: 1fr;
   }
 
-  .hero-visual {
+  .system-sidebar {
     display: none;
-  }
-
-  h1 {
-    font-size: 2.3rem;
   }
 }
