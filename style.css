@@ -263,3 +263,102 @@ footer {
 .project-page {
   max-width: 800px;
 }
+/* ---------- NAV (EDITORIAL) ---------- */
+.top-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2.5rem;
+  font-size: 0.95rem;
+}
+
+.nav-left {
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.nav-right a {
+  margin-left: 1.5rem;
+  text-decoration: none;
+  color: var(--text-dark);
+}
+
+.nav-right a.active {
+  color: var(--lilac);
+}
+
+.nav-muted {
+  margin-left: 1.5rem;
+  color: var(--text-muted);
+}
+
+/* ---------- WORKSPACE LAYOUT ---------- */
+.workspace {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 6rem 2.5rem;
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr;
+  gap: 4rem;
+}
+
+/* ---------- MAIN AREA ---------- */
+.workspace-main h1 {
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+}
+
+.soft-highlight {
+  color: var(--lilac);
+}
+
+.workspace-intro {
+  max-width: 520px;
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  margin-bottom: 2.5rem;
+}
+
+/* ---------- NOTES ---------- */
+.workspace-notes {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+}
+
+.note-card {
+  background: #ffffff;
+  padding: 1.5rem;
+  border-radius: 14px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.05);
+}
+
+.note-card h4 {
+  margin-bottom: 0.8rem;
+  font-size: 0.95rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--sage);
+}
+
+.note-card ul {
+  padding-left: 1.2rem;
+  color: var(--text-dark);
+}
+
+.note-card.subtle {
+  background: transparent;
+  box-shadow: none;
+  border-left: 3px solid var(--cream);
+  padding-left: 1.2rem;
+  font-style: italic;
+  color: var(--text-muted);
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 900px) {
+  .workspace {
+    grid-template-columns: 1fr;
+  }
+}

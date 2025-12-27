@@ -3,30 +3,60 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Oorjitha | Portfolio</title>
+  <title>Oorjitha | Workspace</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
+<!-- NAVIGATION -->
 <nav class="top-nav">
-  <a href="index.html">Home</a>
-  <a href="about.html">About</a>
-  <a href="projects.html">Projects</a>
-  <a href="resume.pdf" target="_blank">Resume</a>
+  <div class="nav-left">oorjitha.</div>
+  <div class="nav-right">
+    <a href="index.html" class="active">Home</a>
+    <a href="about.html">About</a>
+    <a href="projects.html">Projects</a>
+    <span class="nav-muted">Resume (soon)</span>
+  </div>
 </nav>
 
-<section id="hero">
-  <h1>
-    A personal workspace for
-    <span class="highlight">thinking, building, and research</span>
-  </h1>
+<!-- HERO / WORKSPACE -->
+<section class="workspace">
 
-  <p class="subtitle">
-    Electronics & Computer Engineering student working on intelligent systems
-    across software, hardware, and data.
-  </p>
+  <!-- LEFT: MAIN THOUGHT -->
+  <div class="workspace-main">
+    <h1>
+      A personal workspace for<br />
+      <span class="soft-highlight">thinking, building,<br />and research</span>
+    </h1>
 
-  <a href="projects.html" class="btn primary">View Projects</a>
+    <p class="workspace-intro">
+      Electronics & Computer Engineering student exploring intelligent systems
+      across software, embedded hardware, and data — through projects,
+      experiments, and documentation.
+    </p>
+
+    <a href="projects.html" class="btn primary">View Projects</a>
+  </div>
+
+  <!-- RIGHT: NOTES -->
+  <div class="workspace-notes">
+    <div class="note-card">
+      <h4>Current focus</h4>
+      <ul>
+        <li>Real-time & embedded systems</li>
+        <li>AI + computer vision</li>
+        <li>System-level thinking</li>
+      </ul>
+    </div>
+
+    <div class="note-card subtle">
+      <p>
+        This site is not a portfolio of services —
+        it’s a record of how I think, build, and learn.
+      </p>
+    </div>
+  </div>
+
 </section>
 
 </body>
